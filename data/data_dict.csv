@@ -1,0 +1,9 @@
+,
+institution,Where data was collected from
+apprehension,Average cost to detain a single illegal immigrent
+bed_day,Average cost of a bed (during detention) per day
+per_day,staff cost per day during detention
+avg_day,average days in detention
+legal,average legal cost per hearing
+hearing,average number of hearings 
+transport,average transport cost
