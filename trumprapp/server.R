@@ -7,11 +7,24 @@ shinyServer(function(input, output) {
   output$distPlot <- renderPlot({
     
     # generate bins based on input$bins from ui.R
-    x    <- faithful[, 2] 
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
+    y    <- input$apprehension.user + 
+            input$avg_day.user * (input$per_day.user + input$bed_day.user) +
+            input$legal.user * input$hearing.user + input$transport.user
     
-    # draw the histogram with the specified number of bins
-    hist(x, breaks = bins, col = 'darkgray', border = 'white')
+        plot(input$avg_day.user, y, 
+             ylim = c(0,50000), 
+             xlim = c(0,365),
+             # LABELS
+             ylab = "Anticipated cost to deport a single immigrant",
+             xlab = "Anticipated detention time",
+             main = "Welcome, to TrumpLand",
+             # COLORS n stuff
+             pch = 19, # 19 the best baby
+             col = rgb(1,0,0,0.8)
+             # cex = 9
+             
+             )
+
     
   })
   
