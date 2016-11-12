@@ -8,7 +8,7 @@ shinyServer(function(input, output) {
     
     # generate bins based on input$bins from ui.R
     y    <- input$apprehension.user + 
-            input$avg_day.user * (input$per_day.user + input$bed_day.user) +
+            input$avg_day.user * input$per_day.user +
             input$legal.user * input$hearing.user + input$transport.user
     
         plot(input$avg_day.user, y, 
