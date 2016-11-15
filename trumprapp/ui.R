@@ -17,7 +17,9 @@ shinyUI(fluidPage(
   # apprehension bed_day per_day avg_day legal hearing transport
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
+          
     sidebarPanel(
+            
         numericInput("apprehension.user",
                    "Cost to apprehend",
                    min = 500,
@@ -52,7 +54,10 @@ shinyUI(fluidPage(
     
     # Show a plot of the generated distribution
     mainPanel(
-       plotOutput("distPlot")
+            h2("How much will deporting an illegal immigrant cost?"),
+       plotOutput("distPlot"),
+       h6("How much")
     )
   )
 ))
+
