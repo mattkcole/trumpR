@@ -49,14 +49,15 @@ shinyUI(fluidPage(
                     "Cost of transport back to 'home country'",
                     min = 200,
                     max = 5000,
-                    value = 1000)
+                    value = 1000),
+       h6("join the cause", a("contribute to the repo", href="https://github.com/mattkcole/trumpR"))
     ),
     
     # Show a plot of the generated distribution
     mainPanel(
             h2("How much will deporting an illegal immigrant cost?"),
        plotOutput("distPlot"),
-       h6("How much")
+       h6("How much?")
     )
   )
 ))
